@@ -80,6 +80,32 @@ void NW_Align(void** seq_1, int len_seq_1,
     print_scores_mat(scoresMat, len_seq_1, len_seq_2);
     print_dir_mat(dirMat, len_seq_1, len_seq_2);
 
+
+    // Finding start point
+
+    int max_row = 0;
+    int max_col = len_seq_2;
+    int max_val = scoresMat[0][len_seq_2];
+    
+    for(int i = 1; i <= len_seq_1; i++) {
+        if (scoresMat[i][len_seq_2] > max_val) {
+            max_row = i;
+            max_col = len_seq_2;
+            max_val = scoresMat[i][len_seq_2];
+        }
+    }
+
+    for(int j = 1; j <= len_seq_2; j++) {
+        if (scoresMat[len_seq_1][j] > max_val) {
+            max_row = len_seq_1;
+            max_col = j;
+            max_val = scoresMat[len_seq_1][j];
+        }
+    }
+
+    
+    // Finding the path
+
     return;
 }
 

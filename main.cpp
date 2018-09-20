@@ -35,7 +35,7 @@ int main() {
         seq_2[i] = test_seq_2 + i;
     }
 
-    NW_Align((void**)seq_1, 6, (void**)seq_2, 15, relay_func, 8, 8);
+    NW_Align((void**)seq_1, 6, (void**)seq_2, 15, relay_func, 12, 7);
     return 0;
 }
 
