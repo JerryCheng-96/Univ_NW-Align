@@ -26,7 +26,7 @@ float Blosum_mat::BlosumSimFunc(void* elem_1, void* elem_2) {
 }
 
 Blosum_mat::Blosum_mat() {
-	PrintBlosum(blosum_mat_vals);
+	// PrintBlosum(blosum_mat_vals);
 }
 
 #pragma endregion

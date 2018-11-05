@@ -25,17 +25,17 @@ int main() {
     char* test_seq_2 = "AAAAIPGAWDDDDD";
 
     char* seq_1[6] = { NULL };
-    char* seq_2[15] = { NULL };
+    char* seq_2[14] = { NULL };
 
     for (int i = 0; i < 6; i++) {
         seq_1[i] = test_seq_1 + i;
     }
     
-    for (int i = 0; i < 15; i++) {
+    for (int i = 0; i < 14; i++) {
         seq_2[i] = test_seq_2 + i;
     }
 
-    NW_Align((void**)seq_1, 6, (void**)seq_2, 15, relay_func, 12, 7);
+    NW_Align((void**)seq_2, "AAAAIPGAWDDDDD", 14, (void**)seq_1, "IPGAWD", 6, relay_func, 12, 7);
     return 0;
 }
 
