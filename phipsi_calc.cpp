@@ -45,5 +45,6 @@ float CalcPPEuclidianDist(void* elem_1, void* elem_2) {
     float* aa_1 = (float*)elem_1;
     float* aa_2 = (float*)elem_2;
 
-    return sqrt(pow(aa_1[0] - aa_2[0], 2) + pow(aa_1[1] - aa_2[1], 2));
+    // return sqrt(pow(aa_1[0] - aa_2[0], 2) + pow(aa_1[1] - aa_2[1], 2));
+    return sin(aa_1[0] + aa_1[1] - aa_2[0] - aa_2[1]);
 }

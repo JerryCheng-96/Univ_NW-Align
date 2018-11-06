@@ -38,7 +38,7 @@ int main() {
     ReadAAPPSeq("s_1.pre", &chr_seq_1, &seq_1, &len_seq_1);
     ReadAAPPSeq("s_2.pre", &chr_seq_2, &seq_2, &len_seq_2);
 
-    NW_Align(seq_1, chr_seq_1, len_seq_1, seq_2, chr_seq_2, len_seq_2, relay_func, 10, 5);
+    NW_Align(seq_1, chr_seq_1, len_seq_1, seq_2, chr_seq_2, len_seq_2, relay_func, 0.5, 0.1);
 
     // b_mat = new Blosum_mat();
 
