@@ -20,6 +20,19 @@ int arg_max(float* theArray, float* pMaxValue, int len) {
     return maxIndex;
 }
 
+void ReverseString(char * theString)
+{
+	char temp = '\0';
+	int length = strlen(theString);
+
+	for (int i = 0; i < length / 2 - 1; i++)
+	{
+		temp = theString[i];
+		theString[i] = theString[length - 1 - i];
+		theString[length - 1 - i] = temp;
+	}
+}
+
 void NW_Align(void** seq_1, char* chr_seq_1, int len_seq_1, 
               void** seq_2, char* chr_seq_2, int len_seq_2, 
               float (*sim_func)(void*, void*), 
@@ -179,21 +192,8 @@ void NW_Align(void** seq_1, char* chr_seq_1, int len_seq_1,
     ReverseString(seq_1_res);
     ReverseString(seq_2_res);
 
-    printf("%s\n", seq_1_res);
+    printf("\n\n%s\n", seq_1_res);
     printf("%s\n", seq_2_res);
 
     return;
-}
-
-void ReverseString(char * theString)
-{
-	char temp = '\0';
-	int length = strlen(theString);
-
-	for (int i = 0; i < length / 2 - 1; i++)
-	{
-		temp = theString[i];
-		theString[i] = theString[length - 1 - i];
-		theString[length - 1 - i] = temp;
-	}
 }
